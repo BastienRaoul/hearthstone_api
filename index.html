@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-title">
+      <p>Hearthstone Collection</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="filter">
+      <div class="classe-wrapper">
+        <input type="radio" name="classe" id="druide">
+        <label for="druide"><img src="img/icon/Icon_Druid_48.png" alt="icon-druide"></label>
+        <input type="radio" name="classe" id="chasseur">
+        <label for="chasseur"><img src="img/icon/Icon_Hunter_48.png" alt="icon-hunter"></label>
+        <input type="radio" name="classe" id="mage">
+        <label for="mage"><img src="img/icon/Icon_Mage_48.png" alt="icon-mage"></label>
+        <input type="radio" name="classe" id="paladin">
+        <label for="paladin"><img src="img/icon/Icon_Paladin_48.png" alt="icon-paladin"></label>
+        <input type="radio" name="classe" id="prêtre">
+        <label for="prêtre"><img src="img/icon/Icon_Priest_48.png" alt="icon-priest"></label>
+        <input type="radio" name="classe" id="voleur">
+        <label for="voleur"><img src="img/icon/Icon_Rogue_48.png" alt="icon-rogue"></label>
+        <input type="radio" name="classe" id="chaman">
+        <label for="chaman"><img src="img/icon/Icon_Shaman_48.png" alt="icon-shaman"></label>
+        <input type="radio" name="classe" id="demoniste">
+        <label for="demoniste"><img src="img/icon/Icon_Warlock_48.png" alt="icon-warlock"></label>
+        <input type="radio" name="classe" id="guerrier">
+        <label for="guerrier"><img src="img/icon/Icon_Warrior_48.png" alt="icon-warrior"></label>
+        <input type="radio" name="classe" id="neutre" checked>
+        <label for="neutre"><img src="img/icon/Icon_Warrior_48.png" alt="icon-neutre"></label>
+      </div>
+      <div class="text-wrapper">
+        <input type="search" name="search" id="text-field" placeholder="Recherche">
+      </div>
+      <div class="categorie-wrapper">
+        <label for="categorie-field">Catégorie</label>
+        <select name="parametres de la collection" id="categorie-field">
+          <option value="Cartes standard" selected>Cartes standard</option>
+          <option value="Toutes les cartes">Toutes les cartes</option>
+          <!-- Ensembles de cartes standard -->
+          <option value="Uldum">Uldum</option>
+          <option value="Eveil des ombres">Eveil des ombres</option>
+          <option value="Rastakhan">Rastakhan</option>
+          <option value="Armageboum">Armageboum</option>
+          <option value="Bois Maudit">Bois Maudit</option>
+          <option value="Classique">Classique</option>
+          <option value="Jeu de base">Jeu de base</option>
+          <!-- Ensembles de cartes libres -->
+          <option value="Kobolds et Catacombes">Kobolds et Catacombes</option>
+          <option value="Chevaliers du Trône de glace">Chevaliers du Trône de glace</option>
+          <option value="Voyage au centre d’Un’Goro">Voyage au centre d’Un’Goro</option>
+          <option value="Main basse sur Gadgetzan">Main basse sur Gadgetzan</option>
+          <option value="Une nuit à Karazhan">Une nuit à Karazhan</option>
+          <option value="Les murmures des Dieux très anciens">Les murmures des Dieux très anciens</option>
+          <option value="Ligue des explorateurs">Ligue des explorateurs</option>
+          <option value="Le Grand Tournoi">Le Grand Tournoi</option>
+          <option value="Mont Rochenoire">Mont Rochenoire</option>
+          <option value="Gobelins et Gnomes">Gobelins et Gnomes</option>
+          <option value="La malédiction de Naxxramas">La malédiction de Naxxramas</option>
+          <option value="Le Panthéon">Le Panthéon</option>
+        </select>
+      </div>
+      <div class="coût-wrapper">
+        <input type="checkbox" name="manaCost" id="manaCost-0">
+        <label for="manaCost-0"><img src="img/icon/Icon_Druid_48.png" alt="icon-manaCost-0"></label>
+        <input type="checkbox" name="manaCost" id="manaCost-1">
+        <label for="manaCost-1"><img src="img/icon/Icon_Druid_48.png" alt="icon-manaCost-1"></label>
+        <input type="checkbox" name="manaCost" id="manaCost-2">
+        <label for="manaCost-2"><img src="img/icon/Icon_Druid_48.png" alt="icon-manaCost-2"></label>
+        <input type="checkbox" name="manaCost" id="manaCost-3">
+        <label for="manaCost-3"><img src="img/icon/Icon_Druid_48.png" alt="icon-manaCost-3"></label>
+        <input type="checkbox" name="manaCost" id="manaCost-4">
+        <label for="manaCost-4"><img src="img/icon/Icon_Druid_48.png" alt="icon-manaCost-4"></label>
+        <input type="checkbox" name="manaCost" id="manaCost-5">
+        <label for="manaCost-5"><img src="img/icon/Icon_Druid_48.png" alt="icon-manaCost-5"></label>
+        <input type="checkbox" name="manaCost" id="manaCost-6">
+        <label for="manaCost-6"><img src="img/icon/Icon_Druid_48.png" alt="icon-manaCost-6"></label>
+        <input type="checkbox" name="manaCost" id="manaCost-7">
+        <label for="manaCost-7"><img src="img/icon/Icon_Druid_48.png" alt="icon-manaCost-7"></label>
+      </div>
+    </div>
+    <div class="container"></div>
+  </main>
+
+  <footer></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

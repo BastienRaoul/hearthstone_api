@@ -1,0 +1,176 @@
+@charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 35vh;
+}
+
+header .header-title {
+  text-align: center;
+  line-height: 35vh;
+}
+
+header .header-title p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 0.15em;
+}
+
+main {
+  width: 70%;
+  margin: auto;
+  margin-top: 3em;
+}
+
+main .filter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "classe coût" "categorie recherche";
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 1em;
+  width: 100%;
+  height: 7em;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  text-align: center;
+  border-radius: 5px;
+  background-color: #252525;
+}
+
+main .filter .classe-wrapper input {
+  position: absolute;
+  left: -9999px;
+}
+
+main .filter .classe-wrapper input:checked + label img {
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+}
+
+main .filter .classe-wrapper label {
+  padding: 0.3em;
+}
+
+main .filter .classe-wrapper label img {
+  height: 32px;
+}
+
+main .filter .text-wrapper {
+  width: 100%;
+  height: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: recherche;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top-right-radius: 5px;
+}
+
+main .filter .text-wrapper #text-field {
+  width: 80%;
+  max-width: 300px;
+  overflow: hidden;
+  outline: none;
+  padding: 8px;
+  margin: auto;
+  color: #fff;
+  border: none;
+  background-color: #252525;
+}
+
+main .filter .categorie-wrapper {
+  width: 100%;
+  height: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: categorie;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top-left-radius: 5px;
+}
+
+main .filter .categorie-wrapper label {
+  margin: auto;
+  margin-right: 0;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+main .filter .categorie-wrapper #categorie-field {
+  width: 80%;
+  max-width: 250px;
+  background-color: #252525;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  padding: 8px;
+  margin: auto;
+  margin-left: 25px;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+main .filter .coût-wrapper input {
+  position: absolute;
+  left: -9999px;
+}
+
+main .filter .coût-wrapper input:checked + label img {
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+}
+
+main .filter .coût-wrapper label {
+  padding: 0.3em;
+}
+
+main .filter .coût-wrapper label img {
+  height: 32px;
+}
+
+main .container {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container .item {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  margin: 1em;
+}
+
+main .container .item img {
+  width: 155px;
+}
+/*# sourceMappingURL=style.css.map */
