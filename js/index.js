@@ -26,7 +26,7 @@ const manageCollection = function () {
     },
     apiRequest: async function () {
       for (let page = 1; page < 6; page++) {
-        const url = `https://us.api.blizzard.com/hearthstone/cards?locale=fr_FR&collectible=1&type=minion%2Cspell%2Cweapon&pageSize=500&page=${page}&access_token=USHx1Zeeez55biUOLVqY9J6ZWJp3kTqXC9`;
+        const url = `https://us.api.blizzard.com/hearthstone/cards?locale=fr_FR&collectible=1&type=minion%2Cspell%2Cweapon&pageSize=500&page=${page}&access_token=USRrOSXm7CF6YuyANBO2W1YNuWjmj6znGN`;
         await fetch(url)
           .then(function (response) {
             return response.json();
