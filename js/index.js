@@ -8,12 +8,12 @@ const manageCollection = function () {
   let minionTypeId;
 
   function afficher() {
-    document.querySelector(".container").innerHTML = '';
+    document.querySelector("#container").innerHTML = '';
     cardDefault.forEach(element => {
       if (categorieId.includes(element.cardSetId) && element.classId == classeId) {
         if (element.cardTypeId == typeId || element.minionTypeId == minionTypeId || element.text.toLowerCase().includes(search) || element.name.toLowerCase().includes(search)) {
           if (manaCost.includes(element.manaCost) || manaCost.includes('All')) {
-            document.querySelector(".container").insertAdjacentHTML('beforeend', `<div class="item"><img src="${element.image}" alt=""></div>`);
+            document.querySelector(`#container`).insertAdjacentHTML('beforeend', `<div class="item"><img class="carteImage" src="${element.image}" alt=""></div>`);
           }
         }
       }
@@ -267,3 +267,20 @@ $("#text-field").on("search", function () {
   collection.setSearchFilter('');
   collection.show();
 });
+
+
+// Modal
+let modal = document.querySelector("#myModal");
+let modalImg = document.getElementById("img01");
+
+document.getElementById("container").addEventListener("click", function (e) {
+  if (e.target.src) {
+    modal.style.display = "block";
+    modalImg.src = e.target.src;
+  }
+});
+
+// When the user clicks on <span> (x), close the modal
+document.getElementsByClassName("close")[0].onclick = function () {
+  modal.style.display = "none";
+};
