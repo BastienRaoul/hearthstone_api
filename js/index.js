@@ -4,8 +4,8 @@ const manageCollection = function () {
   let classeId;
   let manaCost = ['All'];
   let search = '';
-  let typeId;
-  let minionTypeId;
+  let typeId = 0;
+  let minionTypeId = 0;
 
   function afficher() {
     document.querySelector("#container").innerHTML = '';
@@ -198,6 +198,7 @@ const manageCollection = function () {
       afficher();
     },
     searchFilter: function (parameter) {
+      typeId = 0, minionTypeId = 0, search = '';
       switch (parameter.toLowerCase()) {
         case 'serviteur':
           typeId = 4;
@@ -244,7 +245,6 @@ const manageCollection = function () {
           search = 'dragon';
           break;
         default:
-          typeId = -1;
           search = parameter;
           break;
       }
@@ -279,17 +279,13 @@ $("#text-field").on("search", function () {
 
 
 // Modal
-let modal = document.querySelector("#myModal");
-let modalImg = document.getElementById("img01");
-
 document.getElementById("container").addEventListener("click", function (e) {
   if (e.target.src) {
-    modal.style.display = "block";
-    modalImg.src = e.target.src;
+    document.querySelector("#myModal").style.display = "block";
+    document.getElementById("img01").src = e.target.src;
   }
 });
 
-// When the user clicks on <span> (x), close the modal
 document.getElementsByClassName("close")[0].onclick = function () {
-  modal.style.display = "none";
+  document.querySelector("#myModal").style.display = "none";
 };

@@ -5,33 +5,32 @@ body {
   display: block;
   width: 100%;
   min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 header {
   width: 100%;
-  height: 35vh;
+  height: 25vh;
 }
 
 header .header-title {
   text-align: center;
-  line-height: 35vh;
+  line-height: 25vh;
   position: relative;
   z-index: 1;
 }
 
 header .header-title p {
   margin: 0;
-  font-family: sans-serif;
-  font-size: 2.5em;
-  letter-spacing: 0.15em;
+  font-size: 2em;
+  font-weight: 500;
 }
 
 header .rectangle {
   position: absolute;
-  top: 5.83333vh;
+  top: 4.16667vh;
   width: 100%;
-  height: 23.33333vh;
+  height: 16.66667vh;
   background-color: lightblue;
 }
 
@@ -57,11 +56,11 @@ main .filter {
   width: 100%;
   height: 7em;
   background-color: white;
-  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
   border-radius: 5px;
-  background-color: #252525;
+  background-color: #fff;
 }
 
 main .filter .classe-wrapper input {
@@ -80,6 +79,7 @@ main .filter .classe-wrapper label {
 
 main .filter .classe-wrapper label img {
   height: 32px;
+  border-radius: 1em;
 }
 
 main .filter .classe-wrapper label img:hover {
@@ -95,7 +95,7 @@ main .filter .text-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top-right-radius: 5px;
+  border-top: 1px solid #efefef;
 }
 
 main .filter .text-wrapper #text-field {
@@ -105,9 +105,10 @@ main .filter .text-wrapper #text-field {
   outline: none;
   padding: 8px;
   margin: auto;
-  color: #fff;
+  border-radius: 5px;
   border: none;
-  background-color: #252525;
+  color: #6d767e;
+  border: 1px solid #6d767e;
 }
 
 main .filter .categorie-wrapper {
@@ -119,28 +120,29 @@ main .filter .categorie-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top-left-radius: 5px;
+  border-top: 1px solid #efefef;
 }
 
 main .filter .categorie-wrapper label {
   margin: auto;
   margin-right: 0;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 600;
+  color: #6d767e;
+  font-size: 1.1em;
+  font-weight: 700;
 }
 
 main .filter .categorie-wrapper #categorie-field {
   width: 80%;
   max-width: 250px;
-  background-color: #252525;
+  border-radius: 5px;
   border: none;
   overflow: hidden;
   outline: none;
   padding: 8px;
   margin: auto;
   margin-left: 25px;
-  color: #fff;
+  color: #6d767e;
+  border: 1px solid #6d767e;
   font-size: 0.9em;
 }
 
@@ -160,6 +162,7 @@ main .filter .coût-wrapper label {
 
 main .filter .coût-wrapper label img {
   height: 32px;
+  border-radius: 1em;
 }
 
 main .filter .coût-wrapper label img:hover {
