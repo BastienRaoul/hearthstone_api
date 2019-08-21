@@ -25,17 +25,26 @@ const manageCollection = function () {
       console.log(cardDefault);
     },
     apiRequest: async function () {
-      for (let page = 1; page < 6; page++) {
-        const url = `https://us.api.blizzard.com/hearthstone/cards?locale=fr_FR&collectible=1&type=minion%2Cspell%2Cweapon&pageSize=500&page=${page}&access_token=USRrOSXm7CF6YuyANBO2W1YNuWjmj6znGN`;
-        await fetch(url)
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (json) {
-            json.cards.forEach(element => {
-              cardDefault.push(element);
+      try {
+        for (let page = 1; page < 6; page++) {
+          const url = `https://us.api.blizzard.com/hearthstone/cards?locale=fr_FR&collectible=1&type=minion%2Cspell%2Cweapon&pageSize=500&page=${page}&access_token=UShkgGfrebek88tlNZrQ8ejpMVEswTFArY`;
+          await fetch(url)
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (json) {
+              json.cards.forEach(element => {
+                cardDefault.push(element);
+              });
             });
-          });
+        }
+        localStorage.setItem("dataAPIHearthstone", JSON.stringify(cardDefault));
+      } catch (error) {
+        if (localStorage.getItem("dataAPIHearthstone")) {
+          cardDefault = JSON.parse(localStorage.getItem('dataAPIHearthstone'));
+        } else {
+          alert(error);
+        }
       }
       collection.classeFilter("neutre");
     },
