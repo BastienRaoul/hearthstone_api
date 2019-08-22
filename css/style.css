@@ -13,11 +13,30 @@ header {
   height: 25vh;
 }
 
+@media screen and (max-width: 1300px) {
+  header {
+    height: 15vh;
+  }
+}
+
 header .header-title {
   text-align: center;
   line-height: 25vh;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (max-width: 1300px) {
+  header .header-title {
+    line-height: 15vh;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  header .header-title {
+    padding-top: 90px;
+    line-height: 60px;
+  }
 }
 
 header .header-title p {
@@ -26,18 +45,16 @@ header .header-title p {
   font-weight: 500;
 }
 
-header .rectangle {
-  position: absolute;
-  top: 4.16667vh;
-  width: 100%;
-  height: 16.66667vh;
-  background-color: lightblue;
-}
-
 main {
   width: 70%;
   margin: auto;
   /* The Modal (background) */
+}
+
+@media screen and (max-width: 1300px) {
+  main {
+    width: 80%;
+  }
 }
 
 main .filter {
@@ -63,9 +80,46 @@ main .filter {
   background-color: #fff;
 }
 
+@media screen and (max-width: 1300px) {
+  main .filter {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "recherche" "categorie" "coût" "classe";
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 1em;
+    width: 100%;
+    height: 15em;
+    background-color: white;
+    -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+}
+
+main .filter .classe-wrapper {
+  height: 40px;
+  line-height: 40px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+main .filter .classe-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
 main .filter .classe-wrapper input {
   position: absolute;
   left: -9999px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: classe;
 }
 
 main .filter .classe-wrapper input:checked + label img {
@@ -131,6 +185,12 @@ main .filter .categorie-wrapper label {
   font-weight: 700;
 }
 
+@media screen and (max-width: 500px) {
+  main .filter .categorie-wrapper label {
+    display: none;
+  }
+}
+
 main .filter .categorie-wrapper #categorie-field {
   width: 80%;
   max-width: 250px;
@@ -146,9 +206,30 @@ main .filter .categorie-wrapper #categorie-field {
   font-size: 0.9em;
 }
 
+@media screen and (max-width: 500px) {
+  main .filter .categorie-wrapper #categorie-field {
+    margin: auto;
+    max-width: 300px;
+  }
+}
+
+main .filter .coût-wrapper {
+  height: 40px;
+  line-height: 40px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+main .filter .coût-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
 main .filter .coût-wrapper input {
   position: absolute;
   left: -9999px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: coût;
 }
 
 main .filter .coût-wrapper input:checked + label img {
@@ -279,5 +360,18 @@ main .modal .close:focus {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
+}
+
+.bottom-left {
+  position: absolute;
+  color: #a5a1a1;
+  top: 0;
+  left: 1em;
+  z-index: 10;
+}
+
+.bottom-left a {
+  color: #a5a1a1;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
