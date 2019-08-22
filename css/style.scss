@@ -192,8 +192,8 @@ main {
         .coût-wrapper {
             height: 40px;
             line-height: 40px;
-            overflow-x: scroll;
-            overflow-y: hidden;
+            overflow-x: hidden;
+            overflow-y: scroll;
 
             &::-webkit-scrollbar {
                 width: 5px;
