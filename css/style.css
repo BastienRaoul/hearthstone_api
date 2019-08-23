@@ -387,6 +387,12 @@ main .modal .close:focus {
   z-index: 10;
 }
 
+@media screen and (max-width: 570px) {
+  .bottom-left {
+    display: none;
+  }
+}
+
 .bottom-left a {
   color: #a5a1a1;
   text-decoration: none;
