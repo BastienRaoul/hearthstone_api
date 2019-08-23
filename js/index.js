@@ -6,12 +6,13 @@ const manageCollection = function () {
   let search = '';
   let typeId = 0;
   let minionTypeId = 0;
+  let rarityId = 0;
 
   function afficher() {
     document.querySelector("#container").innerHTML = '';
     cardDefault.forEach(element => {
       if (categorieId.includes(element.cardSetId) && element.classId == classeId) {
-        if (element.cardTypeId == typeId || element.minionTypeId == minionTypeId || element.text.toLowerCase().includes(search) || element.name.toLowerCase().includes(search)) {
+        if (element.cardTypeId == typeId || element.minionTypeId == minionTypeId || element.rarityId == rarityId || element.text.toLowerCase().includes(search) || element.name.toLowerCase().includes(search)) {
           if (manaCost.includes(element.manaCost) || manaCost.includes('All')) {
             document.querySelector(`#container`).insertAdjacentHTML('beforeend', `<div class="item"><img class="carteImage" src="${element.image}" alt=""></div>`);
           }
@@ -27,7 +28,7 @@ const manageCollection = function () {
     apiRequest: async function () {
       try {
         for (let page = 1; page < 6; page++) {
-          const url = `https://us.api.blizzard.com/hearthstone/cards?locale=fr_FR&collectible=1&type=minion%2Cspell%2Cweapon&pageSize=500&page=${page}&access_token=US3U8avaCnW8Wa2MByPwgiVi6ZlMWoJKXJ`;
+          const url = `https://us.api.blizzard.com/hearthstone/cards?locale=fr_FR&collectible=1&type=minion%2Cspell%2Cweapon&pageSize=500&page=${page}&access_token=US6NEyWwDMCS3FYJaQHxvwP4B34CIXCml6`;
           await fetch(url)
             .then(function (response) {
               return response.json();
@@ -198,7 +199,7 @@ const manageCollection = function () {
       afficher();
     },
     searchFilter: function (parameter) {
-      typeId = 0, minionTypeId = 0, search = '';
+      typeId = 0, minionTypeId = 0, search = '', rarityId = 0;
       switch (parameter.toLowerCase()) {
         case 'serviteur':
           typeId = 4;
@@ -243,6 +244,26 @@ const manageCollection = function () {
         case 'dragon':
           minionTypeId = 24;
           search = 'dragon';
+          break;
+        case 'commune':
+          rarityId = 1;
+          search = 'commune';
+          break;
+        case 'gratuite':
+          rarityId = 2;
+          search = 'gratuite';
+          break;
+        case 'rare':
+          rarityId = 3;
+          search = 'rare';
+          break;
+        case 'épique':
+          rarityId = 4;
+          search = 'épique';
+          break;
+        case 'légendaire':
+          rarityId = 5;
+          search = 'légendaire';
           break;
         default:
           search = parameter;

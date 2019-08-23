@@ -103,15 +103,17 @@ main .filter {
   }
 }
 
-main .filter .classe-wrapper {
-  height: 40px;
-  line-height: 40px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-main .filter .classe-wrapper::-webkit-scrollbar {
-  width: 5px;
+@media screen and (max-width: 570px) {
+  main .filter .classe-wrapper {
+    width: 80%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  main .filter .classe-wrapper::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 main .filter .classe-wrapper input {
@@ -152,6 +154,12 @@ main .filter .text-wrapper {
   border-top: 1px solid #efefef;
 }
 
+@media screen and (max-width: 1300px) {
+  main .filter .text-wrapper {
+    border-top: none;
+  }
+}
+
 main .filter .text-wrapper #text-field {
   width: 80%;
   max-width: 300px;
@@ -177,6 +185,13 @@ main .filter .categorie-wrapper {
   border-top: 1px solid #efefef;
 }
 
+@media screen and (max-width: 1300px) {
+  main .filter .categorie-wrapper {
+    border-top: none;
+    border-bottom: 1px solid #efefef;
+  }
+}
+
 main .filter .categorie-wrapper label {
   margin: auto;
   margin-right: 0;
@@ -185,7 +200,7 @@ main .filter .categorie-wrapper label {
   font-weight: 700;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
   main .filter .categorie-wrapper label {
     display: none;
   }
@@ -206,22 +221,24 @@ main .filter .categorie-wrapper #categorie-field {
   font-size: 0.9em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
   main .filter .categorie-wrapper #categorie-field {
     margin: auto;
     max-width: 300px;
   }
 }
 
-main .filter .coût-wrapper {
-  height: 40px;
-  line-height: 40px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-main .filter .coût-wrapper::-webkit-scrollbar {
-  width: 5px;
+@media screen and (max-width: 570px) {
+  main .filter .coût-wrapper {
+    width: 80%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  main .filter .coût-wrapper::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 main .filter .coût-wrapper input {
