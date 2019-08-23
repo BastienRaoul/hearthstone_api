@@ -254,6 +254,10 @@ main {
                 cursor: pointer;
                 transition: 0.3s;
 
+                @media only screen and (max-width: 425px) {
+                    width: 90px;
+                }
+
                 &:hover {
                     opacity: 0.7;
                 }
